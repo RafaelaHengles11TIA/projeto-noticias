@@ -1,195 +1,169 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
 }
 
-:root{
-    font-size: 62.5%;
-    --bg-body:#fffdfa;
-    --tittle-color:#00001a;
-    --text-color:#5e607a;
-    --anchor-bg:#f15d51;
-    --section-bg:#00001a;
-    --subtittle-color:#e9aa52;
-    --p-color:#c5c6ce;
+:root {
+    --almost-white: #FFFDFA;
+    --dark-blue: #00001A;
+    --gunmetal: #5E607A;
+    --vermillion: #F15D51;
+    --yellow: #E9AA52;
+    --silver: #C5C6CE;
 }
 
-body{ 
-    font-size: 1.6rem;
-    padding-inline: 1.6rem;
-    background-color: var(--bg-body);
+body {
+    padding: 1.75rem 1rem;
+    background-color: var(--almost-white);
 }
 
-header{
-    margin-top: 2.8rem;
-    margin-bottom: 3.2rem;
+body.menu-open::before {
+    content: "";
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 26, 0.5);
+    top: 0;
+    left: 0;
+}
+
+.header-mobile {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 2rem;
 }
 
-.primeira{
-    margin-bottom: 6.4rem;
-}
-
-.primeira img{
-    width: 100%;
-    margin-bottom: 2.4rem;
-
-}
-
-.primeira h1{
-    color: var(--tittle-color);
-    font-size: 4rem;
-    font-weight: 800;
-    line-height: 100%;
-    margin-bottom: 1.6rem;
-}
-
-.primeira p{
-    color: var(--text-color);
-    font-size: 1.5rem;
-    line-height: 2.6rem;
-    margin-bottom: 2.4rem;
-
-}
-
-.primeira a{
-    display:block;
-    background: var(--anchor-bg);
+.header-mobile button {
+    border: none;
+    background: none;
     width: fit-content;
-    padding: 1.2rem 3.3rem;
-    color: var(--bg-body);
+}
+
+.header-mobile nav {
+    position: fixed;
+    background-color: var(--almost-white);
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 16rem;
+    z-index: 999;
+
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.5rem;
+}
+
+.header-mobile nav button {
+    align-self: flex-end;
+    margin-bottom: 4rem;
+}
+
+.header-mobile nav a {
     text-decoration: none;
-    text-transform:uppercase;
+    color: var(--dark-blue);
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+}
+
+.primeira-secao {
+    margin-bottom: 4rem;
+}
+
+.primeira-secao img {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.primeira-secao h1 {
+    font-size: 2.5rem;
+    line-height: 100%;
+    color: var(--dark-blue);
+    margin-bottom: 1rem;
+}
+
+.primeira-secao p {
+    font-size: 0.9375rem;
+    line-height: 1.625rem;
+    color: var(--gunmetal);
+    margin-bottom: 1.5rem;
+}
+
+.primeira-secao button {
+    padding:  0.75rem 2rem;
+    background-color: var(--vermillion);
+    border: none;
+    text-transform: uppercase;
+    color: var(--almost-white);
     font-weight: 700;
-    font-size: 1.4rem;
-    line-height: 2.4rem;
-    letter-spacing: 0.4375rem;
-    
+    font-size: 0.875rem;
+    letter-spacing: 0.275rem;
+    line-height: 1.5rem;
 }
 
-.segunda{
-    background: var(--section-bg);
-    padding: 2.4rem;
-    margin-bottom: 6.4rem;
-    
-    h2{
-        color: var(--subtittle-color);
-        font-size: 3.2rem;
-        margin-bottom: 3.5rem;
-    }
-
-    h3{
-        color: var(--bg-body);
-        font-size: 2rem;
-        line-height: 2.4rem;
-        margin-bottom: 0.8rem;
-    }
-
-    p{
-        color: var(--p-color);
-        font-size: 1.5rem;
-        line-height: 2.6rem;
-    }
-
-    div + div{
-        border-top: 1px solid var(--text-color);
-        padding-top: 3.1rem;
-    }
-
-    div:nth-of-type(1),
-    div:nth-of-type(2){
-        margin-bottom: 3.1rem;
-    }
-
+.segunda-secao {
+    background-color: var(--dark-blue);
+    margin-bottom: 4rem;
+    padding: 1.5rem 1rem;
 }
 
-.terceira{
-
-    ol,li{
-        list-style: none;
-    }
-
-    li{
-        display: flex;
-        gap: 2.4rem;
-        margin-bottom: 3.2rem;
-
-        
-        img{
-            max-width: 10rem;
-            
-        }
-
-        div{
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            
-            
-            span{
-                font-size: 3.2rem;
-                line-height: 3.2rem;
-                font-weight: 700;
-                color: var(--p-color);
-            }
-
-            p{
-                font-size: 1.5rem;
-                line-height: 1.6rem;
-                color: var(--text-color);
-            }
-
-            strong{
-                color: var(--section-bg);
-                font-size: 1.8rem;
-                line-height: 2.4rem;
-
-            }
-        }
-    }
+.margin-border-padding {
+    border-bottom: 1px solid var(--gunmetal);
+    margin-bottom: 1.75rem;
+    padding-bottom: 1.75rem;
 }
 
-@media(min-width:900px){
+.segunda-secao h2 {
+    color: var(--yellow);
+    font-size: 2rem;
+    line-height: 100%;
+    margin-bottom: 2.2rem;
+}
 
-    header,
-    main{
-        max-width: 1110px;
-        margin-inline: auto;
-    }
+.segunda-secao h3 {
+    color: var(--almost-white);
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
 
-    main{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 3rem;
+.segunda-secao p {
+    color: var(--silver);
+    font-size: 0.9375rem;
+    line-height: 1.625rem;
+}
 
-        .primeira{
-            grid-column: 1/3;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            
-            picture{
-                grid-column: 1/3;
-            }
+.terceira-secao > div {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
 
-            h1{
-                font-size: 5.6rem;
-            }
-        }
+.terceira-secao img {
+    max-width: 6.25rem;
+}
 
-        .terceira{
-            grid-column: 1/4;
-        }
+.terceira-secao strong {
+    color: var(--silver);
+    font-size: 2rem;
+    line-height: 100%;
+}
 
-        ol{
-            display: flex;
-            gap: 3rem;
-        }
-    }
+.terceira-secao h2 {
+    color: var(--dark-blue);
+    font-size: 1.125rem;
+    font-weight: 800;
+    line-height: 1.5rem;
+    margin-block: 0.6rem;
+}
 
+.terceira-secao p {
+    font-size: 0.9375rem;
+    line-height: 1.625rem;
+    color: var(--gunmetal);
 }
